@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,160,160" width="170" height="170">
+            <path id="myTextPath" d="M 64,0 A 64,64 0 0 1 -64,0 A 64,64 0 0 1 64,0" transform="translate(80,80)" fill="none"></path>
+            
+            <text fill="#ffffff" stroke-width="0">
+            <textPath xlink:href="#myTextPath"><tspan dy="4">No Half Measures   No Half Measures   </tspan></textPath>
+            </text>
+        </svg>

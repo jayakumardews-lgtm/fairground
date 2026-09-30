@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fairground Menu</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            scene: "#5b7180",
+            ink: "#111111",
+            volt: "#ccff00"
+          }
+        }
+      }
+    };
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+
+<body class="bg-white font-sans">
+
+  <site-menu></site-menu>
+
+  <section class="flex h-screen items-center justify-center">
+    <h1 class="text-5xl font-bold">page content</h1>
+  </section>
+
+  <script src="./assets/js/site-menu.js"></script>
+</body>
+</html>

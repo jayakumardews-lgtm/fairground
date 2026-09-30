@@ -1,0 +1,203 @@
+  :root {
+      --fs-label: clamp(.8rem, .95vw, 1.25rem);
+      --fs-body: clamp(.9rem, 1.05vw, 1.4rem);
+      --fs-cta: clamp(.85rem, 1vw, 1.3rem);
+      --fs-acc: clamp(.75rem, .92vw, 1.3rem);
+      --fs-cap: clamp(.95rem, 1.15vw, 1.6rem);
+      --fs-h3: clamp(1.1rem, 1.3vw, 2rem);
+      --acc-h: clamp(56px, 4.7vw, 120px);
+      --btn: clamp(38px, 3vw, 80px);
+        --bg-acid: #d4f312;
+  --bg-ink: #0b0b0b;
+  }
+
+
+
+
+  .t-label {
+      font-size: var(--fs-label);
+  }
+
+  .t-cap {
+      font-size: var(--fs-cap);
+  }
+
+  .t-h3 {
+      font-size: var(--fs-h3);
+  }
+
+  html {
+      scroll-behavior: auto;
+  }
+
+  body {
+      background: #0b0b0b;
+  }
+
+
+  .pill {
+      flex-shrink: 0;
+      white-space: nowrap;
+      border: 1.5px solid rgba(255, 255, 255, .9);
+      border-radius: 9999px;
+      font-weight: 500;
+      line-height: 1.2;
+      font-size: clamp(1.05rem, 2vw, 3.2rem);
+      padding: .8em 1.7em;
+      margin-right: clamp(.75rem, 1.55vw, 3rem);
+  }
+
+
+  .news-wrap {
+      --w: max(36.3vw, 280px);
+  }
+
+  .news-mark {
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(255, 255, 255, .13);
+      font-weight: 300;
+      font-size: clamp(6rem, 16vw, 26rem);
+      line-height: 1;
+  }
+
+  .news-swiper {
+      position: relative;
+      z-index: 10;
+  }
+
+  .news-swiper .swiper-slide {
+      width: var(--w);
+      cursor: pointer;
+  }
+
+  .news-swiper .card {
+      aspect-ratio: 3 / 2;
+      border-radius: 4px;
+      overflow: hidden;
+      transform: scale(.84);
+      transform-origin: 50% 0%;
+      transition: transform .8s cubic-bezier(.65, 0, .35, 1);
+  }
+
+  .news-swiper .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      -webkit-user-drag: none;
+  }
+
+  .news-swiper .swiper-slide-active .card {
+      transform: scale(1);
+  }
+
+
+  .news-swiper .cap {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity .6s ease .2s, transform .6s ease .2s;
+  }
+
+  .news-swiper .swiper-slide-active .cap {
+      opacity: 1;
+      transform: none;
+  }
+
+
+  .container-x {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  @media (min-width: 1024px) {
+      .container-x {
+          width: 63%;
+      }
+  }
+
+  .eyebrow {
+      line-height: 1;
+      color: rgba(255, 255, 255, 0.75);
+      font-size: var(--fs-label);
+  }
+
+  .body-copy {
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: var(--fs-body);
+  }
+
+  .play-btn {
+      display: inline-flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9999px;
+      background-color: var(--bg-acid);
+      width: var(--btn);
+      height: var(--btn);
+      transition: transform .3s ease;
+  }
+
+  .play-btn svg {
+      width: 26%;
+      height: auto;
+      transform: translateX(6%);
+  }
+
+  .cta {
+      display: inline-flex;
+      align-items: center;
+      font-weight: 600;
+      color: #ffffff;
+      gap: .9em;
+      font-size: var(--fs-cta);
+  }
+
+  .cta:hover .play-btn {
+      transform: scale(1.12);
+  }
+
+  .acc-item {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .acc-head {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: rgba(255, 255, 255, 0.9);
+      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+      height: var(--acc-h);
+      font-size: var(--fs-acc);
+  }
+
+  .acc-head:hover {
+      color: var(--bg-acid);
+  }
+
+  .acc-body {
+      height: 0;
+      overflow: hidden;
+  }
+
+  .acc-body p {
+      padding-bottom: 1.5rem;
+      padding-right: 2.5rem;
+      line-height: 1.75;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: var(--fs-body);
+  }
+
+  .caret {
+      width: .75em;
+      height: .7em;
+  }

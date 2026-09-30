@@ -1,0 +1,87 @@
+ * {
+      font-family: Poppins, sans-serif;
+    }
+
+    html,
+    body {
+      margin: 0;
+      background: #090a0c;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .mask {
+      display: block;
+      overflow: hidden;
+      padding-bottom: 0.1em;
+      margin-bottom: -0.1em;
+    }
+
+    .inner {
+      display: block;
+    }
+
+    #cardFog {
+      position: fixed;
+      inset: 0;
+      z-index: 90;
+      pointer-events: none;
+      background: rgba(9, 10, 12, 0.55);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      opacity: 0;
+    }
+
+    #cardFog.is-active {
+      pointer-events: auto;
+    }
+
+    #focusClose {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 110;
+      display: grid;
+      place-items: center;
+      width: 52px;
+      height: 52px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      background: rgba(9, 10, 12, 0.4);
+      color: #fff;
+      cursor: pointer;
+      visibility: hidden;
+    }
+
+    #cursor {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 140;
+      display: grid;
+      place-items: center;
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      background: #fff;
+      color: #090a0c;
+      font-size: 13px;
+      font-weight: 500;
+      pointer-events: none;
+      opacity: 0;
+    }
+
+    @media (hover: hover) {
+      .work-card,
+      #cardFog.is-active {
+        cursor: none;
+      }
+    }
+
+    @media (hover: none) {
+      #cursor {
+        display: none;
+      }
+    }
